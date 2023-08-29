@@ -1,8 +1,8 @@
 :root {
-	--font-body: 'Helvetica Neue', 'Open Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu,
-		Cantarell,  sans-serif;
+	--font-body: 'Helvetica Neue', 'Open Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+		Oxygen, Ubuntu, Cantarell, sans-serif;
 	--color-white: #ffffff;
-	--color-primary: #F42C04;
+	--color-primary: #f42c04;
 	--color-title: #111;
 	--color-text: #343434;
 	font-family: var(--font-body);
@@ -20,7 +20,9 @@ body {
 	padding: 0 20px;
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
 	color: var(--color-title);
 	line-height: 1.2;
 	margin: 0;
@@ -57,7 +59,7 @@ p:not(:last-child) {
 	h1 {
 		font-size: 42px;
 	}
-	
+
 	h2 {
 		font-size: 28px;
 	}

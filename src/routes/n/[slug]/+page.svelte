@@ -191,11 +191,6 @@
 {/if}
 
 <style>
-	.hero {
-		max-width: 860px;
-		margin: 0 auto;
-	}
-
 	.content,
 	.lyrics {
 		max-width: 640px;

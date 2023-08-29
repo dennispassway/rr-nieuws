@@ -1,5 +1,5 @@
 <script>
-	import Logo from "./Logo.svelte";
+	import Logo from './Logo.svelte';
 </script>
 
 <header>
@@ -39,7 +39,7 @@
 
 	.menuButton {
 		align-items: center;
-		background-color: rgba(0,0,0,0.05);
+		background-color: rgba(0, 0, 0, 0.05);
 		border-radius: 8px;
 		color: var(--color-text);
 		display: flex;

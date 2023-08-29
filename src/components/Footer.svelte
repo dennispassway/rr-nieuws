@@ -3,9 +3,9 @@
 		<div>
 			<h2>Laatste nieuws</h2>
 			<ul>
-				<li><a href="#">Man gevonden in sloot achtertuin</a></li>
-				<li><a href="#">Man gevonden in sloot achtertuin</a></li>
-				<li><a href="#">Man gevonden in sloot achtertuin</a></li>
+				<li><a href="/">Man gevonden in sloot achtertuin</a></li>
+				<li><a href="/">Man gevonden in sloot achtertuin</a></li>
+				<li><a href="/">Man gevonden in sloot achtertuin</a></li>
 			</ul>
 		</div>
 

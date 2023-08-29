@@ -3,7 +3,7 @@
 	import avatar from '../assets/rick-avatar.webp';
 
 	function onButtonClick() {
-        window.location.href = '/aanmaken'
+		window.location.href = '/aanmaken';
 	}
 </script>
 
