@@ -5,9 +5,7 @@
 
 <div>
 	<iframe
-		src={`https://www.youtube-nocookie.com/embed/dQw4w9WgXcQ?si=ltLkKp0Rn8DP6v0t&amp;controls=0&showinfo=0&t=30s&autoplay=${
-			letItRick ? 1 : 0
-		}`}
+		src={`https://www.youtube-nocookie.com/embed/dQw4w9WgXcQ?si=ltLkKp0Rn8DP6v0t&amp;controls=0&showinfo=0`}
 		title="YouTube video player"
 		frameborder="0"
 		allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"

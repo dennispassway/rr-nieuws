@@ -7,6 +7,7 @@
 	import rickAvatar from '../../../assets/rick-avatar.webp';
 	import rickHero from '../../../assets/rick-hero.gif';
 	import CallToAction from '../../../components/CallToAction.svelte';
+	import nggyu from '../../../assets/nggyu.mp3';
 
 	const avatar =
 		'https://images.unsplash.com/photo-1564564321837-a57b7070ac4f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=80&h=80&q=80';
@@ -38,6 +39,7 @@
 	<link rel="preload" as="image" href={rickAvatar} />
 	<link rel="preload" as="image" href={rickHero} />
 	<link rel="preload" as="image" href={rick} />
+	<link rel="preload" as="audio" href={nggyu} />
 
 	<title>{title}</title>
 	<meta name="title" content={title} />
@@ -56,6 +58,8 @@
 {#if modalVisible}
 	<Modal onClose={onModalClose} />
 {/if}
+
+<audio src={nggyu} autoplay={letItRick ? true : false} />
 
 <section>
 	<Hero
@@ -191,6 +195,10 @@
 {/if}
 
 <style>
+	audio {
+		opacity: 0;
+		height: 0;
+	}
 	.content,
 	.lyrics {
 		max-width: 640px;
