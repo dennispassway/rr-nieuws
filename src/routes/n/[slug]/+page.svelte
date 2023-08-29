@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
 	import Embed from '../../../components/Embed.svelte';
 	import FloatingRick from '../../../components/FloatingRick.svelte';
 	import Hero from '../../../components/Hero.svelte';
@@ -19,10 +19,12 @@
 		'Een Russisch onderzoeksteam heeft bevestigd dat Wagner-leider Prigozjin om het leven is gekomen bij de vliegtuigcrash van afgelopen woensdag. Volgens de onderzoekers is de identiteit van alle inzittenden van het vliegtuig vastgesteld op basis van genetische testen.';
 	const date = 'Vandaag, 12:51';
 
+	let audioPlayer: Audio;
 	let letItRick = false;
 	let modalVisible = true;
 
 	$: modalVisible, onModalVisibleChange();
+	$: letItRick, onLetItRickChange();
 
 	function onModalClose() {
 		modalVisible = false;
@@ -32,6 +34,12 @@
 	function onModalVisibleChange() {
 		if (typeof document === 'undefined') return;
 		document.body.style.overflow = modalVisible ? 'hidden' : 'auto';
+	}
+
+	function onLetItRickChange() {
+		if (letItRick) {
+			audioPlayer.play();
+		}
 	}
 </script>
 
@@ -59,7 +67,7 @@
 	<Modal onClose={onModalClose} />
 {/if}
 
-<audio src={nggyu} autoplay={letItRick ? true : false} />
+<audio bind:this={audioPlayer} src={nggyu} />
 
 <section>
 	<Hero
