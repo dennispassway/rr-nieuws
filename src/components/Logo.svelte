@@ -23,7 +23,7 @@
 		display: flex;
 		gap: 4px;
 		font-weight: 600;
-		font-size: 16px;
+		font-size: 20px;
 	}
 
 	.container svg {
