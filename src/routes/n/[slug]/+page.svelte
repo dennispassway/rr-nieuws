@@ -1,5 +1,7 @@
 <script lang="ts">
-	import Embed from '../../../components/Embed.svelte';
+	export let data: PageData;
+	import type { PageData } from './$types';
+
 	import FloatingRick from '../../../components/FloatingRick.svelte';
 	import Hero from '../../../components/Hero.svelte';
 	import Modal from '../../../components/Modal.svelte';
@@ -10,14 +12,9 @@
 	import nggyu from '../../../assets/nggyu.mp3';
 
 	const avatar =
-		'https://images.unsplash.com/photo-1564564321837-a57b7070ac4f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=80&h=80&q=80';
+		'https://images.unsplash.com/photo-1564564321837-a57b7070ac4f?auto=format&fit=crop&w=80&h=80&q=80';
 
-	const image =
-		'https://images.unsplash.com/photo-1569242840838-2a6bdd402fe4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fG1pbGl0YXJ5fGVufDB8fDB8fHww&auto=format&fit=crop&w=860&h=483&q=60';
-	const title = 'Ook Russisch onderzoeksteam bevestigt dood Wagner-leider Prigozjin';
-	const intro =
-		'Een Russisch onderzoeksteam heeft bevestigd dat Wagner-leider Prigozjin om het leven is gekomen bij de vliegtuigcrash van afgelopen woensdag. Volgens de onderzoekers is de identiteit van alle inzittenden van het vliegtuig vastgesteld op basis van genetische testen.';
-	const date = 'Vandaag, 12:51';
+	const date = data.createdAt.toLocaleDateString('nl-NL', { year: 'numeric', month: 'long', day: 'numeric', });
 
 	let audioPlayer: Audio;
 	let letItRick = false;
@@ -49,18 +46,18 @@
 	<link rel="preload" as="image" href={rick} />
 	<link rel="preload" as="audio" href={nggyu} />
 
-	<title>{title}</title>
-	<meta name="title" content={title} />
-	<meta name="description" content={intro} />
-	<meta property="og:title" content={title} />
-	<meta property="og:description" content={intro} />
-	<meta property="og:image" content={image} />
+	<title>{data.title}</title>
+	<meta name="title" content={data.title} />
+	<meta name="description" content={data.intro} />
+	<meta property="og:title" content={data.title} />
+	<meta property="og:description" content={data.intro} />
+	<meta property="og:image" content={`${data.image}?w=1200&h=630&fit=crop&auto=format&q=80`} />
 	<meta property="og:type" content="website" />
 	<meta property="twitter:card" content="summary_large_image" />
 	<meta property="twitter:creator" content="@dennispassway" />
-	<meta property="twitter:title" content={title} />
-	<meta property="twitter:description" content={intro} />
-	<meta property="twitter:image" content={image} />
+	<meta property="twitter:title" content={data.title} />
+	<meta property="twitter:description" content={data.intro} />
+	<meta property="twitter:image" content={`${data.image}?w=1200&h=630&fit=crop&auto=format&q=80`} />
 </svelte:head>
 
 {#if modalVisible}
@@ -72,14 +69,15 @@
 <section>
 	<Hero
 		avatar={letItRick ? rickAvatar : avatar}
+		createdBy={data.createdBy}
 		{date}
-		{title}
-		src={letItRick ? rickHero : image}
+		title={data.title}
+		src={letItRick ? rickHero : `${data.image}?w=860&h=${(860/16)*9}&fit=crop&auto=format&q=80`}
 	/>
 
 	<div class="content">
 		<p>
-			{intro}
+			{data.intro}
 		</p>
 
 		<p>
@@ -91,13 +89,9 @@
 		<h2>Onverwachte wending</h2>
 		<p>
 			Plots heeft dit artikel een onverwachte wending genomen. Je had waarschijnlijk niet verwacht
-			dat je deze video nu ging kijken, en ook nog deze prachtige songteksten mee kunt lezen. Nou,
+			dat je dit nu ging luisteren, en ook nog deze prachtige songteksten mee kunt lezen. Nou,
 			dat kan dus wel. Veel plezier ermee!
 		</p>
-
-		<div class="embed">
-			<Embed src={image} {letItRick} />
-		</div>
 	</div>
 
 	{#if letItRick}
@@ -229,18 +223,10 @@
 		background: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 1));
 	}
 
-	.embed {
-		margin: 20px 0;
-	}
-
 	@media (min-width: 768px) {
 		.content,
 		.lyrics {
 			margin: 40px auto;
-		}
-
-		.embed {
-			margin: 40px 0;
 		}
 	}
 </style>

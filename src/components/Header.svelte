@@ -3,34 +3,45 @@
 </script>
 
 <header>
-	<a href="/">
-		<Logo />
-	</a>
+	<div class="content">
+		<a href="/">
+			<Logo />
+		</a>
 
-	<a class="menuButton" href="/">
-		<svg
-			xmlns="http://www.w3.org/2000/svg"
-			fill="none"
-			viewBox="0 0 24 24"
-			stroke-width="1.5"
-			stroke="currentColor"
-		>
-			<path
-				stroke-linecap="round"
-				stroke-linejoin="round"
-				d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
-			/>
-		</svg>
-	</a>
+		<a class="menuButton" href="/">
+			<svg
+				xmlns="http://www.w3.org/2000/svg"
+				fill="none"
+				viewBox="0 0 24 24"
+				stroke-width="1.5"
+				stroke="currentColor"
+			>
+				<path
+					stroke-linecap="round"
+					stroke-linejoin="round"
+					d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+				/>
+			</svg>
+		</a>
+	</div>
 </header>
 
 <style>
 	header {
-		align-items: center;
 		border-bottom: 1px solid #eaeaea;
+		box-shadow: 0 0px 10px rgba(0, 0, 0, 0.05);
+		margin-left: -20px;
+		padding: 16px 20px;
+		width: calc(100% + 40px);
+	}
+
+	.content {
+		align-items: center;
 		display: flex;
 		justify-content: space-between;
-		padding: 16px 0;
+		margin: 0 auto;
+		max-width: 1140px;
+		width: 100%;
 	}
 
 	header a {
@@ -60,7 +71,7 @@
 
 	@media (min-width: 768px) {
 		header {
-			padding: 24px 0;
+			padding: 24px 20px;
 		}
 	}
 </style>

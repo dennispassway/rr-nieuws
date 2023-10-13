@@ -5,6 +5,7 @@
 	--color-primary: #f42c04;
 	--color-title: #111;
 	--color-text: #343434;
+	--color-text-light: #646464;
 	font-family: var(--font-body);
 	color: var(--color-text);
 }
@@ -18,6 +19,11 @@ body {
 	margin: 0;
 	min-height: 100vh;
 	padding: 0 20px;
+}
+
+input, textarea, button {
+	font-size: 16px;
+	font-family: var(--font-body);
 }
 
 h1,
@@ -49,6 +55,10 @@ p {
 
 p:not(:last-child) {
 	margin: 0 0 1.2em;
+}
+
+a {
+	color: var(--color-primary);
 }
 
 @media (min-width: 768px) {

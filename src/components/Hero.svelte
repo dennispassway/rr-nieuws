@@ -3,6 +3,7 @@
 	export let date: string;
 	export let src: string;
 	export let title: string;
+	export let createdBy:string;
 </script>
 
 <header>
@@ -15,7 +16,7 @@
 	<div class="author">
 		<img alt="Rick" src={avatar} />
 		<div>
-			<strong>Rick</strong>
+			<strong>{createdBy}</strong>
 			<span>Verslaggever</span>
 		</div>
 	</div>

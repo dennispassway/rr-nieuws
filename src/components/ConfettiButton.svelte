@@ -32,15 +32,15 @@
 	}
 
 	button {
-		border-radius: 8px;
-		width: 100%;
-		font-size: 18px;
-		line-height: 1.2;
-		border: 0;
 		background-color: #fdca40;
+		border-radius: 8px;
+		border: 0;
 		color: var(--color-text);
-		font-weight: 600;
-		padding: 12px 20px;
 		cursor: pointer;
+		font-size: 18px;
+		font-weight: 600;
+		line-height: 1.2;
+		padding: 12px 20px;
+		width: 100%;
 	}
 </style>
