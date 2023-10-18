@@ -1,7 +1,11 @@
-<script>
+<script lang="ts">
 	import Header from '../components/Header.svelte';
 	import Footer from '../components/Footer.svelte';
 	import './styles.css';
+
+	import type { LayoutData } from './$types';
+	
+	export let data: LayoutData;
 </script>
 
 <div class="app">
@@ -11,7 +15,7 @@
 		<slot />
 	</main>
 
-	<Footer />
+	<Footer latestArticles={data.latestArticles} />
 </div>
 
 <style>

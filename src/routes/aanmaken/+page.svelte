@@ -18,7 +18,6 @@
 		method="POST"
 		use:enhance={({ formElement, formData, action, cancel, submitter }) => {
 			return async ({ result, update }) => {
-				console.log(result);
 				if (result.type === 'success' && result.data?.redirect) {
 					window.location.replace(result.data?.redirect);
 				} else {

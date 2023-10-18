@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
 	import CallToAction from '../components/CallToAction.svelte';
 </script>
 

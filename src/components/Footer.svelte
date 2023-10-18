@@ -1,11 +1,16 @@
+<script lang="ts">
+	import type { Article } from '../firebase/client';
+	export let latestArticles: Article[] = [];
+</script>
+
 <footer>
 	<div class="grid">
 		<div>
 			<h2>Laatste nieuws</h2>
 			<ul>
-				<li><a href="/">Man gevonden in sloot achtertuin</a></li>
-				<li><a href="/">Man gevonden in sloot achtertuin</a></li>
-				<li><a href="/">Man gevonden in sloot achtertuin</a></li>
+				{#each latestArticles as { title, slug }}
+					<li><a href={`/n/${slug}`}>{title}</a></li>
+				{/each}
 			</ul>
 		</div>
 

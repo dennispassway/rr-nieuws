@@ -1,14 +1,13 @@
 import { getFirestore, Timestamp, FieldValue } from 'firebase-admin/firestore';
 import { initializeApp, cert, getApps } from 'firebase-admin/app';
+import { FIREBASE_SERVICE_ACCOUNT } from '$env/static/private';
 
 if (!getApps().length) {
-	// TODO: move to env variable
-	const SAC = {};
-
-	initializeApp({ credential: cert(SAC) });
+	const credential = cert(JSON.parse(FIREBASE_SERVICE_ACCOUNT))
+	initializeApp({ credential });
 }
 
-interface Article {
+export interface Article {
 	createdAt: Timestamp;
 	createdBy: string;
 	image: string;
@@ -32,15 +31,22 @@ export async function getArticleForSlug(slug: string) {
 	return snapshot.docs[0].data() as Article;
 }
 
-// export async function getLatestArticles() {
-// 	const snapshot = await articlesRef.where('slug', '==', slug).limit(1).get();
+export async function getLatestArticles(amount = 10) {
+	const snapshot = await articlesRef.orderBy('createdAt', 'desc').limit(amount).get();
 
-// 	if (snapshot.empty) {
-// 		return undefined;
-// 	}
+	if (snapshot.empty) {
+		return [];
+	}
 
-// 	return snapshot.docs[0].data() as Article;
-// }
+	const docs: Article[] = [];
+
+	snapshot.forEach((doc) => {
+		const data = doc.data() as Article;
+		docs.push(data);
+	});
+
+	return docs;
+}
 
 export async function createArticle({ title, ...rest }: NewArticle) {
 	const slug = await createUniqueSlugForTitle(title);
