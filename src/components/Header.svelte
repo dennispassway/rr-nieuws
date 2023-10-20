@@ -8,7 +8,7 @@
 			<Logo />
 		</a>
 
-		<a class="menuButton" href="/">
+		<a class="menuButton" href="/" aria-label="Menu knop die naar home gaat">
 			<svg
 				xmlns="http://www.w3.org/2000/svg"
 				fill="none"
