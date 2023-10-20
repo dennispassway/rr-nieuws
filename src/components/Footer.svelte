@@ -27,7 +27,7 @@
 		<div>
 			<h2>Overig</h2>
 			<ul>
-				<li><a href="/disclaimer">Disclaimer</a></li>
+				<li><a href="/">Disclaimer</a></li>
 				<li><a href="/">Privacy</a></li>
 				<li><a href="/">Werken bij</a></li>
 			</ul>
