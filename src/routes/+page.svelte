@@ -31,33 +31,33 @@
 		<div class="imageContainer">
 			<img src={rickHero} alt="Rick Astley" />
 		</div>
-	</div>
+	</div>	
+</section>
 
-	<div class="explainer">
-		<div>
-			<span class="preheader">1.</span>
-			<h2>Maak in 1 minuut een artikel aan</h2>
-			<p>
-				Het aanmaken is gratis, en vraagt alleen om een titel en een korte introductie. Het
-				onderwerp mag je zelf verzinnen, als je slachtoffer(s) er maar in trappen.
-			</p>
-		</div>
-		<div>
-			<span class="preheader">2.</span>
-			<h2>Deel de link met je slachtoffer(s)</h2>
-			<p>
-				Deel de link waar je wil; via Whatsapp, SMS of andere social media. Wij zorgen ervoor dat
-				het eruit ziet als een écht nieuws artikel.
-			</p>
-		</div>
-		<div>
-			<span class="preheader">3.</span>
-			<h2>Laat ze genieten van de hit van Rick 😂</h2>
-			<p>
-				Verwacht direct een bericht terug waarbij ze erkennen dat ze er zijn ingetrapt. Bij het
-				openen van het artikel worden ze direct verrast door Rick!
-			</p>
-		</div>
+<section class="explainer">
+	<div>
+		<span class="preheader">1.</span>
+		<h2>Maak in 1 minuut een artikel aan</h2>
+		<p>
+			Het aanmaken is gratis, en vraagt alleen om een titel en een korte introductie. Het
+			onderwerp mag je zelf verzinnen, als je slachtoffer(s) er maar in trappen.
+		</p>
+	</div>
+	<div>
+		<span class="preheader">2.</span>
+		<h2>Deel de link met je slachtoffer(s)</h2>
+		<p>
+			Deel de link waar je wil; via Whatsapp, SMS of andere social media. Wij zorgen ervoor dat
+			het eruit ziet als een écht nieuws artikel.
+		</p>
+	</div>
+	<div>
+		<span class="preheader">3.</span>
+		<h2>Laat ze genieten van de hit van Rick 😂</h2>
+		<p>
+			Verwacht direct een bericht terug waarbij ze erkennen dat ze er zijn ingetrapt. Bij het
+			openen van het artikel worden ze direct verrast door Rick!
+		</p>
 	</div>
 </section>
 
@@ -86,7 +86,7 @@
 	section {
 		margin: 0 auto;
 		max-width: 1140px;
-		padding: 40px 0;
+		padding: 32px 0;
 		width: 100%;
 	}
 
@@ -115,7 +115,6 @@
 	.explainer {
 		display: grid;
 		gap: 32px;
-		margin-top: 32px;
 	}
 
 	.preheader {
@@ -161,7 +160,7 @@
 
 	@media (min-width: 768px) {
 		section {
-			padding: 80px 0;
+			padding: 64px 0;
 		}
 		.hero {
 			align-items: center;
@@ -179,7 +178,6 @@
 
 		.explainer {
 			grid-template-columns: repeat(3, minmax(0, 1fr));
-			margin-top: 48px;
 		}
 
 		.newsgrid {
