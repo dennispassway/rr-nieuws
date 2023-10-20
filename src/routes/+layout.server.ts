@@ -2,7 +2,7 @@ import { getLatestArticles } from '../firebase/client';
 import type { LayoutServerLoad } from './$types';
 
 export const load: LayoutServerLoad = async () => {
-	const articles = await getLatestArticles(12);
+	const articles = await getLatestArticles();
 
 	const latestArticles = articles.map((article) => {
 		const createdAt = article.createdAt.toDate();

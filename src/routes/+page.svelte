@@ -73,7 +73,7 @@
 				<a class="item" href={`/n/${slug}`}>
 					<img src={`${image}?w=360&h=${(360 / 16) * 9}&fit=crop&auto=format&q=80`} alt={title} />
 					<h3>{title}</h3>
-					<p>{intro}</p>
+					<p>{intro.slice(0,100)}&hellip;</p>
 				</a>
 			</li>
 		{/each}

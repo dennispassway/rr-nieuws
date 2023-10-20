@@ -31,7 +31,7 @@ export async function getArticleForSlug(slug: string) {
 	return snapshot.docs[0].data() as Article;
 }
 
-export async function getLatestArticles(amount = 10) {
+export async function getLatestArticles(amount = 9) {
 	const snapshot = await articlesRef.orderBy('createdAt', 'desc').limit(amount).get();
 
 	if (snapshot.empty) {
