@@ -49,6 +49,7 @@
 	}
 
 	img {
+		aspect-ratio: 16/9;
 		display: block;
 		height: auto;
 		width: 100%;
