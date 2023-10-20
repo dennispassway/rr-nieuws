@@ -3,7 +3,7 @@
 	export let date: string;
 	export let src: string;
 	export let title: string;
-	export let createdBy:string;
+	export let createdBy: string;
 </script>
 
 <header>

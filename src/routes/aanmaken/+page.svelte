@@ -16,7 +16,7 @@
 
 	<form
 		method="POST"
-		use:enhance={({ formElement, formData, action, cancel, submitter }) => {
+		use:enhance={() => {
 			return async ({ result, update }) => {
 				if (result.type === 'success' && result.data?.redirect) {
 					window.location.replace(result.data?.redirect);
@@ -55,7 +55,9 @@
 		</div>
 		<div>
 			<label for="title">Kies een passende afbeelding</label>
-			<span>Kies een afbeelding die past bij het artikel. Deze is zichtbaar wanneer je het artikel deelt en moet ervoor zorgen dat de persoon klikt.</span
+			<span
+				>Kies een afbeelding die past bij het artikel. Deze is zichtbaar wanneer je het artikel
+				deelt en moet ervoor zorgen dat de persoon klikt.</span
 			>
 			<!-- <input type="text" name="title" id="title" min="20" max="75" required /> -->
 			<UnsplashInput />

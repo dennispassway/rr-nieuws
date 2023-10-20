@@ -14,7 +14,11 @@
 	const avatar =
 		'https://images.unsplash.com/photo-1564564321837-a57b7070ac4f?auto=format&fit=crop&w=80&h=80&q=80';
 
-	const date = data.createdAt.toLocaleDateString('nl-NL', { year: 'numeric', month: 'long', day: 'numeric', });
+	const date = data.createdAt.toLocaleDateString('nl-NL', {
+		year: 'numeric',
+		month: 'long',
+		day: 'numeric'
+	});
 
 	let audioPlayer: Audio;
 	let letItRick = false;
@@ -72,7 +76,7 @@
 		createdBy={data.createdBy}
 		{date}
 		title={data.title}
-		src={letItRick ? rickHero : `${data.image}?w=860&h=${(860/16)*9}&fit=crop&auto=format&q=80`}
+		src={letItRick ? rickHero : `${data.image}?w=860&h=${(860 / 16) * 9}&fit=crop&auto=format&q=80`}
 	/>
 
 	<div class="content">
@@ -89,8 +93,8 @@
 		<h2>Onverwachte wending</h2>
 		<p>
 			Plots heeft dit artikel een onverwachte wending genomen. Je had waarschijnlijk niet verwacht
-			dat je dit nu ging luisteren, en ook nog deze prachtige songteksten mee kunt lezen. Nou,
-			dat kan dus wel. Veel plezier ermee!
+			dat je dit nu ging luisteren, en ook nog deze prachtige songteksten mee kunt lezen. Nou, dat
+			kan dus wel. Veel plezier ermee!
 		</p>
 	</div>
 

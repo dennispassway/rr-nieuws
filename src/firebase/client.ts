@@ -3,7 +3,7 @@ import { initializeApp, cert, getApps } from 'firebase-admin/app';
 import { FIREBASE_SERVICE_ACCOUNT } from '$env/static/private';
 
 if (!getApps().length) {
-	const credential = cert(JSON.parse(FIREBASE_SERVICE_ACCOUNT))
+	const credential = cert(JSON.parse(FIREBASE_SERVICE_ACCOUNT));
 	initializeApp({ credential });
 }
 

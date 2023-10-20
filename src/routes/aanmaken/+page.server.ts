@@ -34,7 +34,7 @@ export const actions: Actions = {
 		});
 
 		if (!article) {
-			return fail(500, {  error: true });
+			return fail(500, { error: true });
 		}
 
 		return { redirect: `/n/${article.slug}` };
