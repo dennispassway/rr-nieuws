@@ -72,7 +72,7 @@
 	h2:not(:last-child) {
 		font-size: 18px;
 		color: var(--color-primary);
-		margin: 0 0 0.5em;
+		margin: 0 0 1em;
 	}
 
 	ul {
@@ -82,7 +82,7 @@
 	}
 
 	li:not(:last-child) {
-		margin-bottom: 0.5em;
+		margin-bottom: 1em;
 	}
 
 	.realFooter {
@@ -110,10 +110,6 @@
 		.grid {
 			gap: 40px;
 			grid-template-columns: repeat(4, minmax(0, 1fr));
-		}
-
-		h2:not(:last-child) {
-			margin: 0 0 1em;
 		}
 	}
 </style>
