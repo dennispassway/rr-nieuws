@@ -165,6 +165,7 @@
 
 	.item img {
 		margin-bottom: 16px;
+		aspect-ratio: 16 / 9;
 	}
 
 	.item:hover h3,
