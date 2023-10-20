@@ -5,9 +5,9 @@
 	import FloatingRick from '../../../components/FloatingRick.svelte';
 	import Hero from '../../../components/Hero.svelte';
 	import Modal from '../../../components/Modal.svelte';
-	import rick from '../../../assets/rick.gif';
+	import rick from '../../../assets/rick.webp';
 	import rickAvatar from '../../../assets/rick-avatar.webp';
-	import rickHero from '../../../assets/rick-hero.gif';
+	import rickHero from '../../../assets/rick-hero.webp';
 	import CallToAction from '../../../components/CallToAction.svelte';
 	import nggyu from '../../../assets/nggyu.mp3';
 

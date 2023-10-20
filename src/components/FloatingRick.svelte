@@ -1,5 +1,5 @@
 <script lang="ts">
-	import rick from '../assets/rick.gif';
+	import rick from '../assets/rick.webp';
 
 	export let left: boolean;
 </script>

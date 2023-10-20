@@ -2,7 +2,7 @@
 	import CallToAction from '../components/CallToAction.svelte';
 	import ConfettiButton from '../components/ConfettiButton.svelte';
 	import type { LayoutData } from './$types';
-	import rickHero from '../assets/rick-hero.gif';
+	import rickHero from '../assets/rick-hero.webp';
 
 	export let data: LayoutData;
 
