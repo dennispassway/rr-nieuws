@@ -8,7 +8,7 @@
 		<div>
 			<h2>Laatste nieuws</h2>
 			<ul>
-				{#each latestArticles as { title, slug }}
+				{#each latestArticles.slice(0,5) as { title, slug }}
 					<li><a href={`/n/${slug}`}>{title}</a></li>
 				{/each}
 			</ul>

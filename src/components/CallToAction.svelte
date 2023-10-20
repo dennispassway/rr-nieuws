@@ -19,7 +19,7 @@
 <style>
 	div {
 		margin: 0 auto;
-		max-width: 360px;
+		max-width: 480px;
 		padding: 40px 0;
 		text-align: center;
 		width: 100%;
