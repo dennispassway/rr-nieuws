@@ -2,7 +2,26 @@
 	import { enhance } from '$app/forms';
 	import UnsplashInput from '../../components/UnsplashInput.svelte';
 	export let form;
+
+	const pageTitle = "Artikel aanmaken - RR Nieuws"
+	const pageDescription = "Maak een artikel aan om samen met Rick je vrienden te Rollen."
+	const pageImage = "https://images.unsplash.com/photo-1670272498380-eb330b61f3cd"
 </script>
+
+<svelte:head>
+	<title>{pageTitle}</title>
+	<meta name="title" content={pageTitle} />
+	<meta name="description" content={pageDescription} />
+	<meta property="og:title" content={pageTitle} />
+	<meta property="og:description" content={pageDescription} />
+	<meta property="og:image" content={`${pageImage}?w=1200&h=630&fit=crop&auto=format&q=80`} />
+	<meta property="og:type" content="website" />
+	<meta property="twitter:card" content="summary_large_image" />
+	<meta property="twitter:creator" content="@dennispassway" />
+	<meta property="twitter:title" content={pageTitle} />
+	<meta property="twitter:description" content={pageDescription} />
+	<meta property="twitter:image" content={`${pageImage}?w=1200&h=630&fit=crop&auto=format&q=80`} />
+</svelte:head>
 
 <section>
 	<h1>Een nieuwsbericht toevoegen</h1>

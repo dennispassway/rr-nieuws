@@ -4,6 +4,10 @@
 	import type { LayoutData } from './$types';
 	import rickHero from '../assets/rick-hero.webp';
 
+	const pageTitle = "RR Nieuws - De leukste manier om je vrienden te 'Rick Rollen'"
+	const pageDescription = "Roll samen met Rick Ashley je vrienden door een verzonnen nieuwsbericht aan te maken."
+	const pageImage = "https://images.unsplash.com/photo-1670272498380-eb330b61f3cd"
+
 	export let data: LayoutData;
 
 	function onButtonClick() {
@@ -12,8 +16,18 @@
 </script>
 
 <svelte:head>
-	<title>Home</title>
-	<meta name="description" content="Svelte demo app" />
+	<title>{pageTitle}</title>
+	<meta name="title" content={pageTitle} />
+	<meta name="description" content={pageDescription} />
+	<meta property="og:title" content={pageTitle} />
+	<meta property="og:description" content={pageDescription} />
+	<meta property="og:image" content={`${pageImage}?w=1200&h=630&fit=crop&auto=format&q=80`} />
+	<meta property="og:type" content="website" />
+	<meta property="twitter:card" content="summary_large_image" />
+	<meta property="twitter:creator" content="@dennispassway" />
+	<meta property="twitter:title" content={pageTitle} />
+	<meta property="twitter:description" content={pageDescription} />
+	<meta property="twitter:image" content={`${pageImage}?w=1200&h=630&fit=crop&auto=format&q=80`} />
 </svelte:head>
 
 <section>
