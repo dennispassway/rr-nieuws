@@ -53,5 +53,11 @@ export const UNSPLASH_OPTIONS = [
 		link: 'https://images.unsplash.com/photo-1559589688-6ba6beafe1e5',
 		photographer: 'Markus Spiske',
 		unsplash: 'https://unsplash.com/photos/wIUxLHndcLw'
+	},
+	{
+		link: 'https://images.unsplash.com/photo-1504667374637-defd15bf4f1c',
+		photographer: 'Andrew Gaines',
+		unsplash:
+			'https://unsplash.com/photos/grayscale-photography-of-firefighter-holding-equipment-near-houses-KU5l4lCANFw'
 	}
 ];

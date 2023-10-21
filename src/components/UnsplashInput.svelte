@@ -16,7 +16,7 @@
 				}}
 			>
 				<img
-					src={`${link}?auto=format&fit=crop&q=60&w=200&h=${(200 / 16) * 9}`}
+					src={`${link}?auto=format&fit=crop&q=60&w=300&h=${(300 / 16) * 9}`}
 					alt={`Image by ${photographer} on Unsplash`}
 				/>
 				<span
@@ -40,20 +40,15 @@
 		display: grid;
 		gap: 12px;
 		grid-template-columns: repeat(1, minmax(0, 1fr));
+		grid-template-columns: repeat(2, minmax(0, 1fr));
 		margin-bottom: 8px;
 	}
 
-	@media (min-width: 400px) {
-		.grid {
-			grid-template-columns: repeat(2, minmax(0, 1fr));
-		}
+	span {
+		display: none;
 	}
 
-	@media (min-width: 768px) {
-		.grid {
-			grid-template-columns: repeat(3, minmax(0, 1fr));
-		}
-	}
+	
 
 	p {
 		font-size: 14px;
@@ -90,5 +85,18 @@
 
 	img {
 		aspect-ratio: 16/9;
+		display: block;
+		height: auto;
+		width: 100%;
+	}
+
+	@media (min-width: 768px) {
+		.grid {
+			grid-template-columns: repeat(3, minmax(0, 1fr));
+		}
+
+		span {
+			display: block;
+		}
 	}
 </style>
