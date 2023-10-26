@@ -2,14 +2,16 @@
 	export let data: PageData;
 	import type { PageData } from './$types';
 
+	import { browser } from '$app/environment';
+	import CallToAction from '../../../components/CallToAction.svelte';
 	import FloatingRick from '../../../components/FloatingRick.svelte';
 	import Hero from '../../../components/Hero.svelte';
 	import Modal from '../../../components/Modal.svelte';
+	import nggyu from '../../../assets/nggyu.mp3';
+	import posthog from 'posthog-js';
 	import rick from '../../../assets/rick.webp';
 	import rickAvatar from '../../../assets/rick-avatar.webp';
 	import rickHero from '../../../assets/rick-hero.webp';
-	import CallToAction from '../../../components/CallToAction.svelte';
-	import nggyu from '../../../assets/nggyu.mp3';
 
 	const avatar =
 		'https://images.unsplash.com/photo-1564564321837-a57b7070ac4f?auto=format&fit=crop&w=80&h=80&q=80';
@@ -28,6 +30,10 @@
 	$: letItRick, onLetItRickChange();
 
 	function onModalClose() {
+		if (browser) {
+			posthog.capture('modalClose');
+		}
+
 		modalVisible = false;
 		letItRick = true;
 	}
